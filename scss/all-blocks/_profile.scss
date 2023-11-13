@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.profile{
+    margin-left: auto;
+   .profile__list{
+        @include flexbox-row;
+        gap: 1.5rem;
+        .profile__link{
+            font-size: 1.8rem;
+            font-weight: map.get($font-weights, 'semibold');
+            line-height: 2.194rem;
+            color: $text-white;
+        }
+    } 
+}

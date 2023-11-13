@@ -1,0 +1,94 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.hero{
+    width: 100%;
+    height: fit-content;
+    background: url(../../assets/images/bg-image-2.png) no-repeat;
+    .gradient{
+        width: 100%;
+        background-color: #000000D5;
+        .container{
+            @include flexbox-column;
+            flex-wrap: wrap;
+            padding: 5rem 0;
+            .raw{
+                @include flexbox-row;
+                justify-content: space-between;
+                width: 100%;
+                height: fit-content;
+                .left{
+                    h3{
+                        font-size: 3.6rem;
+                        font-weight: map.get($font-weights, 'bold');
+                        color: $text-white;
+                        line-height: 4.6rem;
+                        margin-bottom: 3rem;
+                        span{
+                            font-weight: map.get($font-weights, 'medium');
+                        }
+                    }
+                }
+                .left > p{
+                    width: 91.5rem;
+                    color: $text-white;
+                    font-size: 2rem;
+                    font-weight: map.get($font-weights, 'medium');
+                    line-height: 3rem;
+                    margin-bottom: 6rem;
+                    .weight-500{
+                        font-weight: map.get($font-weights, 'regular');
+                    }
+                    .weight-400{
+                        font-weight: map.get($font-weights, 'light');
+                    }
+                }
+                .right{
+                    img{
+                        width: 44.7rem;
+                        height: 49.9rem;
+                        margin-left: auto;
+                    }
+                }
+                .line{
+                    @include flexbox-row;
+                    gap: 1.7rem;
+                    margin-top: 3rem;
+                    hr{
+                        // position: relative;
+                        width: 1.8rem;
+                        height: .2rem;
+                    }
+                    .active{
+                        position: relative;
+                        border-color: $orange;
+                    }
+                    hr.active::before{
+                        content: "";
+                        position: absolute;
+                        width: 10rem;
+                        height: 10rem;
+                        border-radius: 50%;
+                        background-color: $orange;
+                        z-index: 1;
+                    }
+                    p{
+                        font-size: 1.8rem;
+                        color: $text-white;
+                        font-weight: map.get($font-weights, 'semibold');
+                        line-height: 4.6rem;
+                        letter-spacing: .1rem;  
+                        span{
+                            font-size: 2.4rem;
+                            font-weight: map.get($font-weights, 'semibold');
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+
+    
+}

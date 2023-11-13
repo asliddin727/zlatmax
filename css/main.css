@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+.button {
+  border: none;
+  padding: 1.5rem 5.2rem;
+  background-color: #E8AA31;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 0.3rem;
+}
+
+.button.hero {
+  font-size: 2rem;
+  box-shadow: 0 0 2rem #E8AA31;
+}
+
+.header {
+  width: 100%;
+  background-color: #141414;
+}
+
+.hero {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: url(../../assets/images/bg-image-2.png) no-repeat;
+}
+.hero .gradient {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8352941176);
+}
+.hero .gradient .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5rem 0;
+}
+.hero .gradient .container .raw {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.hero .gradient .container .raw .left h3 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 4.6rem;
+  margin-bottom: 3rem;
+}
+.hero .gradient .container .raw .left h3 span {
+  font-weight: 500;
+}
+.hero .gradient .container .raw .left > p {
+  width: 91.5rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 3rem;
+  margin-bottom: 6rem;
+}
+.hero .gradient .container .raw .left > p .weight-500 {
+  font-weight: 400;
+}
+.hero .gradient .container .raw .left > p .weight-400 {
+  font-weight: 300;
+}
+.hero .gradient .container .raw .right img {
+  width: 44.7rem;
+  height: 49.9rem;
+  margin-left: auto;
+}
+.hero .gradient .container .raw .line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.7rem;
+  margin-top: 3rem;
+}
+.hero .gradient .container .raw .line hr {
+  width: 1.8rem;
+  height: 0.2rem;
+}
+.hero .gradient .container .raw .line .active {
+  position: relative;
+  border-color: #E8AA31;
+}
+.hero .gradient .container .raw .line hr.active::before {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #E8AA31;
+  z-index: 1;
+}
+.hero .gradient .container .raw .line p {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 4.6rem;
+  letter-spacing: 0.1rem;
+}
+.hero .gradient .container .raw .line p span {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #E8AA31;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6rem;
+}
+.nav__list .nav__item {
+  padding: 2.5rem 0;
+}
+.nav__list .nav__item .nav__link {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.services .services__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10rem;
+}
+.services .services__list .services__item {
+  width: 26.5rem;
+  height: 14.5rem;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1.8rem;
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  margin: 0 10rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile {
+  margin-left: auto;
+}
+.profile .profile__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+.profile .profile__list .profile__link {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.194rem;
+  color: #fff;
+}
+
+.search {
+  width: 37.7rem;
+  margin-left: auto;
+  background-color: hsla(0, 0%, 2.75%, 0.03);
+  border: 0.1rem solid rgba(4, 4, 4, 0.4862745098);
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search .search-btn {
+  border: none;
+  background: transparent;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+}
+.search .search-input {
+  flex-grow: 1;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+  background: transparent;
+}
+
+.address {
+  width: 100%;
+  background-color: #ECF1F2;
+}
+.address .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2.4rem 0;
+}
+.address .container .address__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  gap: 5.5rem;
+}
+.address .container .address__list .address__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+}
+.address .container .address__list .address__item i {
+  font-size: 2.8rem;
+  color: #141414;
+}
+.address .container .address__list .address__item .map {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.address .container .address__list .address__item .phone {
+  position: relative;
+  color: #141414;
+}
+.address .container .address__list .address__item .phone .desc {
+  color: #E8AA31;
+  font-weight: 700;
+}
+.address .container .address__list .address__item .phone::after {
+  content: "";
+  position: absolute;
+  background: url(../../assets/images/down-icon.svg) no-repeat;
+  width: 1.6rem;
+  height: 1.6rem;
+  right: -2rem;
+  top: 0.5rem;
+}
+.address .container .address__list .address__item .address__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.address .container .address__list .address__item .address__link.cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #141414;
+}
+.address .container .address__list .address__item .address__link.cart h4 {
+  margin-left: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+}
+.address .container .address__list .address__item .address__link.cart h4 span.desc {
+  color: #E8AA31;
+}
+.address .container .address__list .address__item .address__link.cart .fa-cart-shopping {
+  position: relative;
+}
+.address .container .address__list .address__item .address__link.cart .fa-cart-shopping .fa-cart-shopping::after {
+  content: "0";
+  position: absolute;
+  background-color: #E8AA31;
+  padding: 1rem;
+}
+
+.menu {
+  width: 100%;
+  background-color: #141414;
+}
+.menu .menu__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 11.5rem;
+}
+.menu .menu__list .menu__item {
+  padding: 2.4rem;
+  cursor: pointer;
+}
+.menu .menu__list .menu__item .menu__link {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: #fff;
+}
+.menu .menu__list .menu__item:hover {
+  color: #E8AA31;
+  border-bottom: 0.5rem solid #E8AA31;
+}
+.menu .menu__list .menu__item:hover .menu__link {
+  color: #E8AA31;
+}
+.menu .menu__list .menu__item.active {
+  color: #E8AA31;
+  border-bottom: 0.5rem solid #E8AA31;
+}
+.menu .menu__list .menu__item.active .menu__link {
+  color: #E8AA31;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}/*# sourceMappingURL=main.css.map */

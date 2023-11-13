@@ -1,0 +1,38 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.menu{
+    width: 100%;
+    background-color: $background-color;
+    .menu__list{
+        @include flexbox-row;
+        gap: 11.5rem;
+        .menu__item{
+            padding: 2.4rem;
+            cursor: pointer;
+           .menu__link{
+                font-size: 1.8rem;
+                font-weight: map.get($font-weights, 'medium');
+                line-height: 2.2rem;
+                color: $text-white;
+            } 
+        }
+        .menu__item:hover{
+            color: $orange;
+            border-bottom: .5rem solid $orange;
+            .menu__link{
+                color: $orange;
+            }
+        }
+
+        .menu__item.active{
+            color: $orange;
+            border-bottom: .5rem solid $orange;
+            .menu__link{
+                color: $orange;
+            }
+        }
+        
+    }
+}

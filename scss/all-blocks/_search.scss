@@ -1,0 +1,21 @@
+.search{
+    width: 37.7rem;
+    margin-left: auto;
+    background-color: hsla(0 0% 2.75% / 0.03);
+    border: .1rem solid #0404047C;
+    border-radius: .3rem;
+    @include flexbox-row;
+    .search-btn{
+        border: none;
+        background: transparent;
+        padding: 1.5rem 2rem;
+        cursor: pointer;
+    }
+    .search-input{
+        flex-grow: 1;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.7rem;
+        background: transparent;
+    }
+}

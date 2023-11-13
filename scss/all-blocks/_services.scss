@@ -1,0 +1,24 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+
+.services{
+    .services__list{
+        @include flexbox-row;
+        flex-wrap: wrap;
+        gap: 10rem;
+        .services__item{
+            width: 26.5rem;
+            height: 14.5rem;
+            font-size: 2rem;
+            line-height: 3.2rem;
+            font-weight: map.get($font-weights, 'semibold');
+            @include flexbox-column;
+            flex-grow: 1;
+            gap: 1.8rem;
+            text-align: center;
+            color: $text-white;
+        }
+    }
+}

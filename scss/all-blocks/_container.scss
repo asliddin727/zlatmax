@@ -1,0 +1,6 @@
+.container{
+    // width: 120rem;
+    margin: 0 10rem;
+    // margin: 0 auto;
+    @include flexbox-row;
+}

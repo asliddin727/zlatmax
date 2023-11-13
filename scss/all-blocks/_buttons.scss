@@ -1,0 +1,32 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+$border: none;
+$button-bg-color: $orange; 
+$button-text-color: $text-white;
+$button-hero-text-size: 2rem;
+$button-card-text-size: 1.8rem;
+$border-radius: .3rem;
+$button-line-height: 4.6rem;
+$button-font-family: 'Montserrat', sans-serif;
+$button-font-weight: map.get($font-weights, 'semibold');
+$button-padding: 1.5rem 5.2rem;
+$button-hero-shadow: 0 0 2rem $orange;
+
+// BUTTON HERO STYLE
+.button{
+    border: $border;
+    padding: $button-padding;
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    font-size: $button-card-text-size;
+    font-weight: $button-font-weight;
+    font-family: $button-font-family;
+    border-radius: $border-radius;
+}
+
+.button.hero{
+    font-size: $button-hero-text-size;
+    box-shadow: $button-hero-shadow;
+}

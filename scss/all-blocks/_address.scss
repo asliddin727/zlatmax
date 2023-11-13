@@ -1,0 +1,73 @@
+.address{
+    width: 100%;
+    background-color: $background-color-gray;
+    .container{
+        @include flexbox-row;
+        padding: 2.4rem 0;
+        .address__list{
+            @include flexbox-row;
+            margin-left: auto;
+            gap: 5.5rem;
+            .address__item{
+                @include flexbox-row;
+                font-size: 1.8rem;
+                font-weight: 600;
+                line-height: 2.2rem;
+                i{
+                    font-size: 2.8rem;
+                    color: $text-dark;
+                }
+                .map{
+                    @include flexbox-row;
+                    gap: 1rem;
+                }
+                .phone{
+                    position: relative;
+                    color: $text-dark;
+                    .desc{
+                        color: $orange;
+                        font-weight: 700;
+                    }
+                }
+                .phone::after{
+                    content: "";
+                    position: absolute;
+                    background: url(../../assets/images/down-icon.svg) no-repeat;
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    right: -2rem;
+                    top: .5rem;
+                }
+                .address__link{
+                    @include flexbox-column;
+                }
+                .address__link.cart{
+                    // position: relative;
+                    @include flexbox-row;
+                    color: $text-dark;
+                    h4{
+                        margin-left: 1.6rem;
+                        @include flexbox-column;
+                        align-items: flex-start;
+                        span.desc{
+                            color: $orange;
+                        }
+                    }
+                }
+                .address__link.cart{
+                    .fa-cart-shopping{
+                        position: relative;
+                        .fa-cart-shopping::after{
+                            content: "0";
+                            position: absolute;
+                            background-color: $orange;
+                            padding: 1rem;
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+}
