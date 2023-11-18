@@ -4,7 +4,7 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
 
 .hero{
     width: 100%;
-    height: fit-content;
+    height: max-content;
     background: url(../../assets/images/bg-image-2.png) no-repeat;
     .gradient{
         width: 100%;
@@ -45,27 +45,46 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
                     }
                 }
                 .right{
-                    img{
+                    position: relative;
+                    img:first-child{
+                        position: absolute;
+                        top: 10rem;
+                        right: -10rem;
+                        width: 42.1rem;
+                        height: 35.4rem;
+                        z-index: -1;
+                    }
+                    img:last-child{
                         width: 44.7rem;
                         height: 49.9rem;
                         margin-left: auto;
-                    }
+                        z-index: 2;
+                    }                    
                 }
+                .right::before{
+                    content: "";
+                    position: absolute;
+                    width: 42.4rem;
+                    height: 35.4rem;
+                    background: url(../../assets/images/ellipse-1.svg) no-repeat;
+                    z-index: -1;
+                }
+                
                 .line{
                     @include flexbox-row;
                     gap: 1.7rem;
                     margin-top: 3rem;
                     hr{
-                        // position: relative;
                         width: 1.8rem;
                         height: .2rem;
                     }
                     .active{
                         position: relative;
+                        background-color: $orange;
                         border-color: $orange;
                     }
-                    hr.active::before{
-                        content: "";
+                    .active::before{
+                        content: "salom";
                         position: absolute;
                         width: 10rem;
                         height: 10rem;

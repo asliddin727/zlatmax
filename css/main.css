@@ -22,8 +22,8 @@
 
 .hero {
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: -moz-max-content;
+  height: max-content;
   background: url(../../assets/images/bg-image-2.png) no-repeat;
 }
 .hero .gradient {
@@ -70,10 +70,30 @@
 .hero .gradient .container .raw .left > p .weight-400 {
   font-weight: 300;
 }
-.hero .gradient .container .raw .right img {
+.hero .gradient .container .raw .right {
+  position: relative;
+}
+.hero .gradient .container .raw .right img:first-child {
+  position: absolute;
+  top: 10rem;
+  right: -10rem;
+  width: 42.1rem;
+  height: 35.4rem;
+  z-index: -1;
+}
+.hero .gradient .container .raw .right img:last-child {
   width: 44.7rem;
   height: 49.9rem;
   margin-left: auto;
+  z-index: 2;
+}
+.hero .gradient .container .raw .right::before {
+  content: "";
+  position: absolute;
+  width: 42.4rem;
+  height: 35.4rem;
+  background: url(../../assets/images/ellipse-1.svg) no-repeat;
+  z-index: -1;
 }
 .hero .gradient .container .raw .line {
   display: flex;
@@ -88,10 +108,11 @@
 }
 .hero .gradient .container .raw .line .active {
   position: relative;
+  background-color: #E8AA31;
   border-color: #E8AA31;
 }
-.hero .gradient .container .raw .line hr.active::before {
-  content: "";
+.hero .gradient .container .raw .line .active::before {
+  content: "salom";
   position: absolute;
   width: 10rem;
   height: 10rem;
@@ -132,7 +153,9 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10rem;
+  justify-content: space-between;
+  align-content: baseline;
+  gap: 17.9rem;
 }
 .services .services__list .services__item {
   width: 26.5rem;
@@ -300,7 +323,6 @@
   color: #fff;
 }
 .menu .menu__list .menu__item:hover {
-  color: #E8AA31;
   border-bottom: 0.5rem solid #E8AA31;
 }
 .menu .menu__list .menu__item:hover .menu__link {

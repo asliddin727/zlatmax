@@ -1,6 +1,6 @@
 @use "sass:map";
-
 $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
 
 .menu{
     width: 100%;
@@ -19,7 +19,6 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
             } 
         }
         .menu__item:hover{
-            color: $orange;
             border-bottom: .5rem solid $orange;
             .menu__link{
                 color: $orange;
