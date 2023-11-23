@@ -1,0 +1,110 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.bestsellers{
+    .container{
+        @include flexbox-column;
+        .bestsellers__top{
+            width: 100%;
+            @include flexbox-row;
+            justify-content: space-between;
+            margin-bottom: 6rem;
+            h3{
+                font-size: 3rem;
+                font-weight: map.get($font-weights, 'bold');
+                line-height: 4.6rem;
+            }
+            a{
+                position: relative;
+                font-size: 1.8rem;
+                font-weight: map.get($font-weights, 'semibold');
+                color: #141414;
+                i{
+                    margin-left: 1rem;
+                    color: $orange;
+                }
+            }
+        }
+        .bestsellers__list{
+            @include flexbox-row;
+            gap: 3rem;
+            .bestsellers__item{
+                position: relative;
+                width: 37.5rem;
+                box-shadow: 0 0 1rem #0000004B;
+                padding: 2rem;
+                img{
+                    width: 100%;
+                }
+                h4{
+                    font-size: 2rem;
+                    font-weight: map.get($font-weights, 'semibold');
+                    line-height: 3.4rem;
+                    color: #141414;
+                }
+                .desc{
+                    @include flexbox-row;
+                    justify-content: space-between;
+                    color: #ababab;
+                    span{
+                        font-size: 1.6rem;
+                        font-weight: map.get($font-weights, 'semibold');
+                        line-height: 3.4rem;
+                    }
+                }
+                .score{
+                    @include flexbox-row;
+                    justify-content: space-between;
+                    margin-bottom: 2.6rem;
+                    span:first-child{
+                        @include flexbox-row;
+                        gap: 1rem;
+                        i{
+                            font-size: 2.2rem;
+                            color: $orange;
+                        }
+                    }
+                    span:last-child{
+                        font-size: 1.6rem;
+                        font-weight: map.get($font-weights, 'medium');
+                        line-height: 3.4rem;
+                        color: #ababab;
+                    }
+                }
+                hr{
+                    border: none;
+                    height: .4rem;
+                    color: #1414142C;
+                    background-color: #1414142A;
+                }
+                .price{
+                    @include flexbox-row;
+                    margin-top: 2rem;
+                    margin-bottom: 2.6rem;
+                    ins{
+                        text-decoration: none;
+                        font-size: 2rem;
+                        font-weight: map.get($font-weights, semibold);
+                    }
+                    .icon{
+                        @include flexbox-row;
+                        gap: 1.5rem;
+                        margin-left: auto;
+                        .fa-scale-balanced{
+                            font-size: 2.6rem;
+                            color: #000;
+                        }
+                        .fa-heart{
+                            font-size: 2.8rem;
+                            color: $orange;
+                        }
+                    }
+                }
+                .button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
