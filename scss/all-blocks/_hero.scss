@@ -4,8 +4,8 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
 
 .hero{
     width: 100%;
-    height: max-content;
     background: url(../../assets/images/bg-image-2.png) no-repeat;
+    background-size: cover;
     .gradient{
         width: 100%;
         background-color: #000000D5;
@@ -18,6 +18,7 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
                 justify-content: space-between;
                 width: 100%;
                 height: fit-content;
+                margin-bottom: 10rem;
                 .left{
                     h3{
                         font-size: 3.6rem;
@@ -48,17 +49,17 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
                     position: relative;
                     img:first-child{
                         position: absolute;
-                        top: 10rem;
-                        right: -10rem;
+                        top: 20rem;
+                        left: 10rem;
                         width: 42.1rem;
                         height: 35.4rem;
-                        z-index: -1;
+                        transform: rotate(30deg);
                     }
                     img:last-child{
                         width: 44.7rem;
                         height: 49.9rem;
                         margin-left: auto;
-                        z-index: 2;
+                        // z-index: 10;
                     }                    
                 }
                 .right::before{
@@ -84,13 +85,14 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
                         border-color: $orange;
                     }
                     .active::before{
-                        content: "salom";
+                        content: "";
                         position: absolute;
-                        width: 10rem;
-                        height: 10rem;
+                        top: 0;
+                        left: 0;
+                        width: 1rem;
+                        height: 1rem;
                         border-radius: 50%;
                         background-color: $orange;
-                        z-index: 1;
                     }
                     p{
                         font-size: 1.8rem;
