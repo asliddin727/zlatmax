@@ -27,7 +27,6 @@ $button-hero-shadow: 0 0 2rem $orange;
     cursor: pointer;
 }
 
-.button.hero{
-    font-size: $button-hero-text-size;
+.button.active:hover{
     box-shadow: $button-hero-shadow;
 }

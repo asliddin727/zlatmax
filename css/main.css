@@ -11,8 +11,7 @@
   cursor: pointer;
 }
 
-.button.hero {
-  font-size: 2rem;
+.button.active:hover {
   box-shadow: 0 0 2rem #E8AA31;
 }
 
