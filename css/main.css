@@ -41,6 +41,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: baseline;
   justify-content: space-between;
   width: 100%;
   height: -moz-fit-content;
@@ -87,14 +89,6 @@
   height: 49.9rem;
   margin-left: auto;
 }
-.hero .gradient .container .raw .right::before {
-  content: "";
-  position: absolute;
-  width: 42.4rem;
-  height: 35.4rem;
-  background: url(../../assets/images/ellipse-1.svg) no-repeat;
-  z-index: -1;
-}
 .hero .gradient .container .raw .line {
   display: flex;
   flex-direction: row;
@@ -102,7 +96,14 @@
   gap: 1.7rem;
   margin-top: 3rem;
 }
-.hero .gradient .container .raw .line hr {
+.hero .gradient .container .raw .line a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #E8AA31;
+  background-color: #E8AA31;
+}
+.hero .gradient .container .raw .line a hr {
   width: 1.8rem;
   height: 0.2rem;
 }
@@ -114,7 +115,6 @@
 .hero .gradient .container .raw .line .active::before {
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
   width: 1rem;
   height: 1rem;
@@ -345,8 +345,9 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   align-content: baseline;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2.894rem;
   margin: 10.9rem 0;
 }
@@ -467,6 +468,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   color: #ababab;
 }
@@ -479,6 +481,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 2.6rem;
 }
@@ -486,6 +489,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .bestsellers .container .bestsellers__list .bestsellers__item .score span:first-child i {
@@ -508,6 +512,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 2rem;
   margin-bottom: 2.6rem;
 }

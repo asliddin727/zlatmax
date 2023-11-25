@@ -50,6 +50,7 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
                 }
                 .desc{
                     @include flexbox-row;
+                    flex-wrap: wrap;
                     justify-content: space-between;
                     color: #ababab;
                     span{
@@ -60,10 +61,12 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
                 }
                 .score{
                     @include flexbox-row;
+                    flex-wrap: wrap;
                     justify-content: space-between;
                     margin-bottom: 2.6rem;
                     span:first-child{
                         @include flexbox-row;
+                        flex-wrap: wrap;
                         gap: 1rem;
                         i{
                             font-size: 2.2rem;
@@ -85,6 +88,7 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
                 }
                 .price{
                     @include flexbox-row;
+                    flex-wrap: wrap;
                     margin-top: 2rem;
                     margin-bottom: 2.6rem;
                     ins{

@@ -7,8 +7,9 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
         .product__list{
             @include flexbox-row;
             flex-wrap: wrap;
+            align-items: center;
             align-content: baseline;
-            justify-content: space-between;
+            justify-content: center;
             gap: 2.894rem;
             margin: 10.9rem 0;
             .product__item{
