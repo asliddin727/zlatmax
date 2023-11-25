@@ -1,0 +1,174 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.news{
+    width: 100%;
+    background: url(../../assets/images/bg-image-2.png) no-repeat;
+    background-size: cover;
+    .gradient{
+        width: 100%;
+        background-color: rgba(0 0 0 / 0.5);
+        .container{
+            @include flexbox-row;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 6.6rem;
+            .news__description{
+                margin-top: 1.8rem;
+                width: 33.6rem;
+                color: #fff;
+                h4{
+                    font-size: 3rem;
+                    font-weight: map.get($font-weights, 'bold');
+                    line-height: 4.6rem;
+                    margin-bottom: 3rem;
+                }
+                p{
+                    font-size: 1.8rem;
+                    font-weight: map.get($font-weights, 'medium');
+                    line-height: 2.7rem;
+                    letter-spacing: 3%;
+                    opacity: .7;
+                    margin-bottom: 6rem;
+                }
+                a{
+                    @include flexbox-row;
+                    font-size: 2rem;
+                    font-weight: map.get($font-weights, 'semibold');
+                    line-height: 4.6rem;
+                    color: $orange;
+                    letter-spacing: 5%;
+                    i{
+                        width: .9rem;
+                        margin-left: 2rem;
+                    }
+                }
+            }
+            .news__card{
+                @include flexbox-column;
+                align-items: center;
+                .bestsellers__list{
+                    @include flexbox-row;
+                    flex-wrap: wrap;
+                    align-content: baseline;
+                    gap: 3rem;
+                    margin-bottom: 6rem;
+                    margin-top: 5.5rem;
+                    .bestsellers__item{
+                        position: relative;
+                        flex-basis: 37.5rem;
+                        box-shadow: 0 0 1rem #0000004B;
+                        background-color: #fff;
+                        padding: 2rem;
+                        flex-grow: 1;
+                        img{
+                            width: 100%;
+                        }
+                        h4{
+                            font-size: 2rem;
+                            font-weight: map.get($font-weights, 'semibold');
+                            line-height: 3.4rem;
+                            color: #141414;
+                        }
+                        .desc{
+                            @include flexbox-row;
+                            justify-content: space-between;
+                            color: #ababab;
+                            span{
+                                font-size: 1.6rem;
+                                font-weight: map.get($font-weights, 'semibold');
+                                line-height: 3.4rem;
+                            }
+                        }
+                        .score{
+                            @include flexbox-row;
+                            justify-content: space-between;
+                            margin-bottom: 2.6rem;
+                            span:first-child{
+                                @include flexbox-row;
+                                gap: 1rem;
+                                i{
+                                    font-size: 2.2rem;
+                                    color: $orange;
+                                }
+                            }
+                            span:last-child{
+                                font-size: 1.6rem;
+                                font-weight: map.get($font-weights, 'medium');
+                                line-height: 3.4rem;
+                                color: #ababab;
+                            }
+                        }
+                        hr{
+                            border: none;
+                            height: .4rem;
+                            color: #1414142C;
+                            background-color: #1414142A;
+                        }
+                        .price{
+                            @include flexbox-row;
+                            margin-top: 2rem;
+                            margin-bottom: 2.6rem;
+                            ins{
+                                text-decoration: none;
+                                font-size: 2rem;
+                                font-weight: map.get($font-weights, semibold);
+                            }
+                            .icon{
+                                @include flexbox-row;
+                                gap: 1.5rem;
+                                margin-left: auto;
+                                .fa-scale-balanced{
+                                    font-size: 2.6rem;
+                                    color: #000;
+                                }
+                                .fa-heart{
+                                    font-size: 2.8rem;
+                                    color: $orange;
+                                }
+                            }
+                        }
+                        .button{
+                            width: 100%;
+                        }
+                    }
+                }
+                .pagenation{
+                    padding-bottom: 4.6rem;
+                    ol{
+                        @include flexbox-row;
+                        gap: 2rem;
+                        li{
+                            a{
+                                cursor: pointer;
+                            }
+                        }
+                        .active{
+                            @include flexbox-row;
+                            position: relative;
+                            hr{
+                                color: $orange;
+                                background-color: #000;
+                            }
+                        }
+                        .active::before{
+                            content:"";
+                            position: absolute;
+                            left: -.5rem;
+                            width: 1rem;
+                            height: 1rem;
+                            border-radius: 50%;
+                            background-color: $orange;
+                        }
+                        hr{
+                            width: 1.8rem;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

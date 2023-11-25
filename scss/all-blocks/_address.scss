@@ -7,6 +7,7 @@
         .address__list{
             @include flexbox-row;
             margin-left: auto;
+            // justify-content: space-between;
             gap: 5.5rem;
             .address__item{
                 @include flexbox-row;
