@@ -1,0 +1,106 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+.article{
+    .container{
+        @include flexbox-column;
+        align-items: flex-start;
+        .article__heading{
+            h4{
+                font-size: 3rem;
+                font-weight: map.get($font-weights, 'bold');
+                line-height: 4.6rem;
+                letter-spacing: 5%;
+                margin-bottom: 3rem;
+            }
+        }
+        .article__top{
+            @include flexbox-row;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 12rem;
+            .article__item{
+                position: relative;
+                width: 37.5rem;
+                height: 35rem;
+                background-color: #fff;
+                box-shadow: 0 0 1rem #1414145A;
+                a{
+                    color: #141414;
+                    img{
+                        width: 100%;
+                    }
+                    h4{
+                        font-size: 2rem;
+                        font-weight: map.get($font-weights, 'semibold');
+                        line-height: 3.4rem;
+                        padding: 2.6rem;
+                        margin-bottom: .4rem;
+                    }
+                    span{
+                        position: absolute;
+                        font-size: 1.6rem;
+                        font-weight: map.get($font-weights, 'semibold');
+                        padding: 3rem;
+                        color: #ababab;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .article__footer{
+            .fonar{
+                @include flexbox-row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-bottom: 7rem;
+                li{
+                    position: relative;
+                    width: 77rem;
+                    height: fit-content;
+                    box-shadow: 0 0 .4rem #333;
+                    @include flexbox-row;
+                    padding: 3rem;
+                    .fonar__desc{
+                        width: 34.5rem;
+                        h4{
+                            font-size: 2.4rem;
+                            font-weight: map.get($font-weights, 'semibold');
+                            line-height: 3.4rem;
+                        }
+                        hr{
+                            width: 6.8rem;
+                            height: .3rem;
+                            border: none;
+                            color: $orange;
+                            background-color: $orange;
+                            margin-bottom: 3rem;
+                        }
+                        p{
+                            width: 26.3rem;
+                            font-size: 1.8rem;
+                            line-height: 2.7rem;
+                            font-weight: map.get($font-weights, 'medium');
+                            margin-bottom: 3rem;
+                        }
+                        .button{
+                            width: 100%;
+                        }
+                    }
+                    .fonar__img{
+                        img{
+                            width: 250px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            z-index: -1;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }   
+}

@@ -1,0 +1,152 @@
+@use "sass:map";
+
+$font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 'semibold': 600, 'bold': 700, 'extrabold': 800, 'black': 900);
+
+.aksiya{
+    margin-top: 12rem;
+    margin-bottom: 16.8rem;
+    .container{
+        @include flexbox-column;
+        .aksiya__top{
+            width: 100%;
+            @include flexbox-row;
+            justify-content: space-between;
+            margin-bottom: 6rem;
+            h3{
+                font-size: 3rem;
+                font-weight: map.get($font-weights, 'bold');
+                line-height: 4.6rem;
+            }
+            a{
+                position: relative;
+                font-size: 1.8rem;
+                font-weight: map.get($font-weights, 'semibold');
+                color: #141414;
+                i{
+                    margin-left: 1rem;
+                    color: $orange;
+                }
+            }
+        }
+        .bestsellers__list{
+            @include flexbox-row;
+            flex-wrap: wrap;
+            align-content: baseline;
+            gap: 3rem;
+            margin-bottom: 6rem;
+            .bestsellers__item{
+                position: relative;
+                width: 37.5rem;
+                box-shadow: 0 0 1rem #0000004B;
+                padding: 2rem;
+                flex-grow: 1;
+                img{
+                    width: 100%;
+                }
+                h4{
+                    font-size: 2rem;
+                    font-weight: map.get($font-weights, 'semibold');
+                    line-height: 3.4rem;
+                    color: #141414;
+                }
+                .desc{
+                    @include flexbox-row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    color: #ababab;
+                    span{
+                        font-size: 1.6rem;
+                        font-weight: map.get($font-weights, 'semibold');
+                        line-height: 3.4rem;
+                    }
+                }
+                .score{
+                    @include flexbox-row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-bottom: 2.6rem;
+                    span:first-child{
+                        @include flexbox-row;
+                        flex-wrap: wrap;
+                        gap: 1rem;
+                        i{
+                            font-size: 2.2rem;
+                            color: $orange;
+                        }
+                    }
+                    span:last-child{
+                        font-size: 1.6rem;
+                        font-weight: map.get($font-weights, 'medium');
+                        line-height: 3.4rem;
+                        color: #ababab;
+                    }
+                }
+                hr{
+                    border: none;
+                    height: .4rem;
+                    color: #1414142C;
+                    background-color: #1414142A;
+                }
+                .price{
+                    @include flexbox-row;
+                    flex-wrap: wrap;
+                    margin-top: 2rem;
+                    margin-bottom: 2.6rem;
+                    ins{
+                        text-decoration: none;
+                        font-size: 2rem;
+                        font-weight: map.get($font-weights, semibold);
+                    }
+                    .icon{
+                        @include flexbox-row;
+                        gap: 1.5rem;
+                        margin-left: auto;
+                        .fa-scale-balanced{
+                            font-size: 2.6rem;
+                            color: #000;
+                        }
+                        .fa-heart{
+                            font-size: 2.8rem;
+                            color: $orange;
+                        }
+                    }
+                }
+                .button{
+                    width: 100%;
+                }
+            }
+        }
+        .pagenation{
+            ol{
+                @include flexbox-row;
+                gap: 2rem;
+                li{
+                    a{
+                        cursor: pointer;
+                    }
+                }
+                .active{
+                    @include flexbox-row;
+                    position: relative;
+                    hr{
+                        color: $orange;
+                        background-color: #000;
+                    }
+                }
+                .active::before{
+                    content:"";
+                    position: absolute;
+                    left: -.5rem;
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 50%;
+                    background-color: $orange;
+                }
+                hr{
+                    width: 1.8rem;
+                    color: #000;
+                }
+            }
+        }
+    }
+}

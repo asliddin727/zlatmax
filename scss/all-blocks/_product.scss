@@ -63,8 +63,9 @@ $font-weights: ('extralight': 200, 'light': 300, 'regular': 400, 'medium': 500, 
                     }
                     .right{
                         position: absolute;
-                        right: 0;
+                        // right: 0;
                         bottom: 0;
+                        transform: scale(.5);
                     }
                 }
             }
